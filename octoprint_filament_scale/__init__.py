@@ -45,7 +45,7 @@ class Filament_scalePlugin(octoprint.plugin.SettingsPlugin,
 
 	
 	def on_startup(self, host, port):
-		self.hx = HX711(20, 21)
+		self.hx = HX711(15, 14)
 		self.hx.set_reading_format("LSB", "MSB") 
 		self.hx.reset()
 		self.hx.power_up()
